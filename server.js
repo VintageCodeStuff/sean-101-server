@@ -1,7 +1,7 @@
 // Lesson-10
 // The Confessions Server
-const DATABASE_DSN = 'mongodb://localhost:27017/testDB';
-const PORT = 8080;
+const DATABASE_DSN = process.env.MONGODB_URI ||'mongodb://localhost:27017/testDB';
+const PORT =process.env.PORT || 8080;
  
 var express = require('express');
 var app = express();
